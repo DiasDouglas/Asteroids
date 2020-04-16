@@ -196,6 +196,8 @@ class Asteroid {
         }
         ctx.closePath();
         ctx.stroke();
+        ctx.fillStyle = "black";
+        ctx.fill();
     }
 }
 
