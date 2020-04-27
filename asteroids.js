@@ -291,13 +291,16 @@ function Render() {
                             asteroids.push(new Asteroid(asteroids[l].x - 5, asteroids[l].y - 5, 15, 3, 12));
                         }
                         asteroids.splice(l, 1);
-                        asteroids.push(new Asteroid());
                         bullets.splice(m, 1);
                         score += 20;
                         break loop1;
                     }
                 }
             }
+    } else if(asteroids.length === 0){
+        ctx.fillStyle = "white";
+        ctx.font = "50px Arial";
+        ctx.fillText("VICTORY!", canvasWidth / 2 - 150, canvasHeight / 2);
     }
 
     if(ship.visible){
